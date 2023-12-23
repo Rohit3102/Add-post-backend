@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+input{
+    width: 100%;
+    padding: .5vw 2vw;
+    font-size: 1.2vw;
+}
+
+button{
+    font-size: 1.1vw;
+    padding: .7vw 1.5vw;
+    background-color: brown;
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    font-weight: 700;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+   <link rel="stylesheet" href="/stylesheets/update.css">
+</head>
+<body>
+    
+
+    <h1>this is Update-post page</h1>
+<%-include("nav.ejs")%> <br><br>
+
+<form action="/update/<%= i%>" method="post">
+
+    <input value="<%= post.profile %>"type="url" placeholder="profile" name="profile"><br><br>
+    <input value="<%= post.name %>" type="text" placeholder="name" name="name"><br><br>
+    <input value="<%= post.title %>" type="text" placeholder="title" name="title"><br><br>
+    <input value="<%= post.subtitle %>" type="text" placeholder="suntitle" name="subtitle"><br><br>
+    <input value="<%= post.posttext %>" type="text" placeholder="posttext" name="posttext"><br><br>
+    <input value="<%= post.postimage %>" type="url" placeholder="postimage" name="postimage"><br><br>
+<button>update</button><br><br>
+
+</form>
+</body>
+</html>
+
+
+

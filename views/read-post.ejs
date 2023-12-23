@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/read.css">
+</head>
+<body>
+
+<h1>this is read page</h1>
+<%-include("nav.ejs")%> <br><br>
+<%POSTS.forEach(function(e,i){%>
+
+    <div class="main">
+        <div class="container">
+            <div class="left"> 
+                 <img src="<%= e.profile %>" alt=""> 
+                </div>
+            <div class="right"><h4><%= e.name %></h4></div>
+        </div>
+        
+        <div class="maintext">
+            <h4><%= e.title %></h4>
+            <h3><%= e.subtitle %></h3>
+        </div>
+        
+        <div class="img-container"> 
+            <h4><%= e.posttext %></h4>
+            <img src="<%= e.postimage %>" alt="">
+        </div>
+
+        
+        <div class="btn">
+            <a href="/Like/<%= i%>"><i class="ri-heart-line"> <%=e.Like%></i></a>
+            <a href="/update/<%= i%>">update</a>
+            <a href="/delete/<%= i%>">delete</a>
+        </div>
+        
+    </div>
+    <%})%>
+    
+
+
+</body>
+</html>
